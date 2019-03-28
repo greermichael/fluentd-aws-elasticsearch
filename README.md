@@ -1,0 +1,1 @@
+# fluentd-aws-elasticsearch
