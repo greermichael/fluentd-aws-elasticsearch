@@ -22,8 +22,6 @@ RUN BUILD_DEPS="make gcc g++ libc6-dev ruby-dev libffi-dev" && \
                      -o APT::AutoRemove::RecommendsImportant=false \
                      $BUILD_DEPS && \
     clean-apt && \
-    # Ensure fluent has enough file descriptors
-    ulimit -n 65536
 
 # Copy the Fluentd configuration file for logging Docker container logs.
 COPY fluent.conf /etc/fluent/fluent.conf
